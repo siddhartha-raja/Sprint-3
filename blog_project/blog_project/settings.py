@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': os.getenv('DB_NAME', 'blog_db'),
         'USER': os.getenv('DB_USER', 'coursera'),
         'PASSWORD': os.getenv('DB_PASSWORD', 'coursera'),
-        'HOST': os.getenv('DB_HOST'),
+        'HOST': os.getenv('DB_HOST', 'coursera-mysql-instance.ci72ci0ewyvm.us-east-1.rds.amazonaws.com'),
         'PORT': '3306',
     }
 }
