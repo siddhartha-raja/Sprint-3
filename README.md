@@ -1,12 +1,13 @@
-# Django Blog Project
+## Screenshots
 
-## Description
-This project sets up a Django environment with automated Git operations.
+1. Docker containers running:
 
-## Setup
-1. Create virtual environment
-2. Install Django
-3. Run server
+![Docker containers running](images/docker-containers-running.png)
 
-## Usage
-Run bash script to automate git commits.
+2. Django app homepage:
+
+![Django app homepage](images/django-homepage.png)
+
+3. Database connection successful:
+
+![Database connection](images/database-connection.png)

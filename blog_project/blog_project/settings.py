@@ -73,19 +73,19 @@ WSGI_APPLICATION = 'blog_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+import os
+
+# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog_db',
-        'USER': 'root',
-        'PASSWORD': 'your_mysql_password',
-        'HOST': '127.0.0.1',
-        'PORT': '3307' if os.getenv('CI') else '3306',
+        'NAME': os.getenv('DB_NAME', 'blog_db'),
+        'USER': os.getenv('DB_USER', 'coursera'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'coursera'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': '3306',
     }
 }
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
